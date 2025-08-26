@@ -21,7 +21,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-[--color-light-300] bg-[--color-light-100]">
+    <header className="w-full bg-[--color-dark-900]">
       <nav
         aria-label="Primary"
         className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6"
@@ -32,6 +32,7 @@ export default function Navbar() {
             alt="Nike Logo"
             width={32}
             height={32}
+            className="invert"
             priority
           />
         </Link>
@@ -44,9 +45,9 @@ export default function Navbar() {
         >
           <span className="sr-only">Open menu</span>
           <div className="space-y-1.5">
-            <span className="block h-0.5 w-6 bg-[--color-dark-900]"></span>
-            <span className="block h-0.5 w-6 bg-[--color-dark-900]"></span>
-            <span className="block h-0.5 w-6 bg-[--color-dark-900]"></span>
+            <span className="block h-0.5 w-6 bg-[--color-light-100]"></span>
+            <span className="block h-0.5 w-6 bg-[--color-light-100]"></span>
+            <span className="block h-0.5 w-6 bg-[--color-light-100]"></span>
           </div>
         </button>
 
@@ -55,7 +56,7 @@ export default function Navbar() {
             <li key={l.label}>
               <Link
                 href={l.href}
-                className="text-sm font-medium text-[--color-dark-900] transition-colors hover:text-[--color-dark-700] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
+                className="text-sm font-medium text-[--color-light-100] transition-colors hover:text-[--color-light-200] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--color-light-100]"
               >
                 {l.label}
               </Link>
@@ -64,11 +65,11 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-6 md:flex">
-          <button className="text-sm text-[--color-dark-900] hover:text-[--color-dark-700]">
+          <button className="text-sm text-[--color-light-100] hover:text-[--color-light-200]">
             Search
           </button>
           <button
-            className="text-sm font-medium text-[--color-dark-900] hover:text-[--color-dark-700]"
+            className="text-sm font-medium text-[--color-light-100] hover:text-[--color-light-200]"
             aria-label="Open cart"
           >
             My Cart (2)
@@ -78,12 +79,12 @@ export default function Navbar() {
 
       {open && (
         <div className="md:hidden">
-          <ul className="space-y-2 border-t border-[--color-light-300] px-4 py-4">
+          <ul className="space-y-2 px-4 py-4">
             {links.map((l) => (
               <li key={l.label}>
                 <Link
                   href={l.href}
-                  className="block rounded px-2 py-2 text-[--color-dark-900] hover:bg-[--color-light-200] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
+                  className="block rounded px-2 py-2 text-[--color-light-100] hover:bg-[--color-dark-700] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--color-light-100]"
                   onClick={() => setOpen(false)}
                 >
                   {l.label}
@@ -91,9 +92,9 @@ export default function Navbar() {
               </li>
             ))}
             <li className="mt-2 flex items-center gap-6 px-2">
-              <button className="text-sm text-[--color-dark-900]">Search</button>
+              <button className="text-sm text-[--color-light-100]">Search</button>
               <button
-                className="text-sm font-medium text-[--color-dark-900]"
+                className="text-sm font-medium text-[--color-light-100]"
                 aria-label="Open cart"
               >
                 My Cart (2)
