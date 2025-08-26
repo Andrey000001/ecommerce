@@ -8,6 +8,7 @@ const placeholderProducts = [
     name: 'Air Max Alpha',
     price: 129.99,
     imageSrc: '/shoes/shoe-1.jpg',
+    badge: { text: 'Best Seller', color: 'orange' as const },
   },
   {
     id: 'p-2',
@@ -20,6 +21,7 @@ const placeholderProducts = [
     name: 'Jordan Lift Off',
     price: 159.99,
     imageSrc: '/shoes/shoe-3.webp',
+    badge: { text: 'Best Seller', color: 'orange' as const },
   },
   {
     id: 'p-4',
@@ -45,7 +47,7 @@ const Home = () => {
               imageSrc={p.imageSrc}
               title={p.name}
               price={p.price}
-              // Add/adjust any other props required by your Card component
+              badge={p.badge}
             />
           ))}
         </div>
