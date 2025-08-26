@@ -35,7 +35,7 @@ export default function Card({
 }: CardProps) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-xl border border-[--color-light-300] bg-[--color-light-100] shadow-sm transition hover:shadow-md${className ? ' ' + className : ''}`}
+      className={`group relative overflow-hidden rounded-xl bg-[--color-light-200] transition${className ? ' ' + className : ''}`}
     >
       {badge?.text && (
         <span
