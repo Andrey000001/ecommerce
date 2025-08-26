@@ -35,23 +35,14 @@ export default function Card({
 }: CardProps) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-xl bg-[--color-light-200] transition${className ? ' ' + className : ''}`}
-    >
-      {badge?.text && (
-        <span
-          className={`absolute left-3 top-3 z-10 rounded-full px-3 py-1 text-xs font-medium ${badgeColorMap[badge.color ?? "orange"] ?? "bg-[--color-orange]/10 text-[--color-orange]"}`}
-        >
-          {badge.text}
-        </span>
-      )}
-
-      <div className="relative aspect-square w-full">
+      className={`group  rounded-xl bg-light-100 ring-1 ring-light-300 transition-color hover:ring-dark-500`}>
+      <div className="relative aspect-square w-full overflow-hidden rounded-t-xl bg-light-200">
         <Image
           src={imageSrc}
           alt={imageAlt || title}
           fill
-          sizes="(min-width: 768px) 33vw, 100vw"
-          className="object-contain transition-transform duration-300 group-hover:scale-105"
+          sizes="(min-width: 1280px) 360px ,(min-with: 1024px) 300px,(min-width: 640px) 45vw ,90vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
           priority={false}
         />
       </div>

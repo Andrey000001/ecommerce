@@ -15,7 +15,7 @@ export default function Footer() {
       links: ["All Clothing", "Modest Wear", "Hoodies & Pullovers", "Shirts & Tops"],
     },
     {
-      heading: "Kids'",
+      heading: "Kids",
       links: [
         "Infant & Toddler Shoes",
         "Kids' Shoes",
@@ -26,23 +26,22 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mt-16 bg-[--color-dark-900] text-[--color-light-100]">
+    <footer className="mt-16 bg-dark-900 text-light-100">
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
           <div className="md:col-span-3">
             <Image
               src="/logo.svg"
               alt="Nike"
-              width={40}
-              height={40}
-              className="invert"
+              width={100}
+              height={50}
             />
           </div>
 
           <div className="md:col-span-8 grid grid-cols-2 gap-8 sm:grid-cols-4">
             {columns.map((col) => (
               <nav key={col.heading} aria-labelledby={`footer-${col.heading}`} className="space-y-3">
-                <h3 id={`footer-${col.heading}`} className="text-sm font-semibold">
+                <h3 id={`footer-${col.heading}`} className="text-xl font-semibold">
                   {col.heading}
                 </h3>
                 <ul className="space-y-2">
@@ -50,7 +49,7 @@ export default function Footer() {
                     <li key={l}>
                       <Link
                         href="#"
-                        className="text-sm text-[--color-dark-500] transition-colors hover:text-[--color-light-100] focus:outline-none focus-visible:ring-2 focus-visible:ring-[--color-light-100]"
+                        className="text-sm text-dark-500 transition-colors hover:text-light-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-light-100"
                       >
                         {l}
                       </Link>
@@ -62,13 +61,13 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-1 flex items-start justify-start gap-3 md:justify-end">
-            <Link aria-label="X / Twitter" href="#" className="rounded-full border border-[--color-dark-700] p-2 hover:border-[--color-light-100]">
+            <Link aria-label="X / Twitter" href="#" className="rounded-full border border-dark-700 p-2 hover:border-light-100 bg-light-100">
               <Image src="/x.svg" alt="X" width={18} height={18} />
             </Link>
-            <Link aria-label="Facebook" href="#" className="rounded-full border border-[--color-dark-700] p-2 hover:border-[--color-light-100]">
+            <Link aria-label="Facebook" href="#" className="rounded-full border border-dark-700 p-2 hover:border-light-100 bg-light-100">
               <Image src="/facebook.svg" alt="Facebook" width={18} height={18} />
             </Link>
-            <Link aria-label="Instagram" href="#" className="rounded-full border border-[--color-dark-700] p-2 hover:border-[--color-light-100]">
+            <Link aria-label="Instagram" href="#" className="rounded-full border border-dark-700 p-2 hover:border-light-100 bg-light-100">
               <Image src="/instagram.svg" alt="Instagram" width={18} height={18} />
             </Link>
           </div>
