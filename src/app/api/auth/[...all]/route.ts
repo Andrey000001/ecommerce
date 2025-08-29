@@ -1,4 +1,4 @@
 import { auth } from "@/lib/auth";
 
-export const GET = (request: Request) => auth.handler.GET(request);
-export const POST = (request: Request) => auth.handler.POST(request);
+export const GET = auth.handler as (request: Request) => Promise<Response>;
+export const POST = auth.handler as (request: Request) => Promise<Response>;
