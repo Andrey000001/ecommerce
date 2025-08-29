@@ -18,7 +18,7 @@ export default function AuthForm({ mode }: Props) {
             {isSignUp ? "Sign In" : "Sign Up"}
           </Link>
         </p>
-        <h1 className="mt-2 text-3xl font-semibold">Join Nike Today!</h1>
+        <h1 className="mt-2 text-3xl md:text-4xl font-semibold">Join Nike Today!</h1>
         <p className="mt-1 text-sm text-[--color-dark-700]">
           {isSignUp ? "Create your account to start your fitness journey" : "Sign in to continue"}
         </p>
@@ -43,7 +43,7 @@ export default function AuthForm({ mode }: Props) {
               name="name"
               type="text"
               placeholder="Enter your full name"
-              className="w-full rounded-xl border border-[--color-light-300] bg-[--color-light-100] px-3 py-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
+              className="w-full h-12 rounded-xl border border-[--color-light-300] bg-[--color-light-100] px-4 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
               autoComplete="name"
             />
           </div>
@@ -57,7 +57,7 @@ export default function AuthForm({ mode }: Props) {
             name="email"
             type="email"
             placeholder="johndoe@gmail.com"
-            className="w-full rounded-xl border border-[--color-light-300] bg-[--color-light-100] px-3 py-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
+            className="w-full h-12 rounded-xl border border-[--color-light-300] bg-[--color-light-100] px-4 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
             autoComplete="email"
           />
         </div>
@@ -71,7 +71,7 @@ export default function AuthForm({ mode }: Props) {
               name="password"
               type={show ? "text" : "password"}
               placeholder="minimum 8 characters"
-              className="w-full rounded-xl border border-[--color-light-300] bg-[--color-light-100] px-3 py-3 pr-10 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
+              className="w-full h-12 rounded-xl border border-[--color-light-300] bg-[--color-light-100] px-4 pr-10 text-sm outline-none focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
               autoComplete={isSignUp ? "new-password" : "current-password"}
             />
             <button
@@ -87,7 +87,7 @@ export default function AuthForm({ mode }: Props) {
 
         <button
           type="submit"
-          className="mt-2 w-full rounded-full bg-[--color-dark-900] px-4 py-3 text-sm font-medium text-white transition hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
+          className="mt-2 h-12 w-full rounded-full bg-[--color-dark-900] px-6 text-sm font-medium text-white transition hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[--color-dark-900]"
         >
           {isSignUp ? "Sign Up" : "Sign In"}
         </button>
